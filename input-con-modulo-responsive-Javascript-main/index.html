@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input con modulo responsive Javascript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            input[type=text]{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+
+            label {
+                padding: 12px 12px 12px 0;
+                display: inline-block;
+            }
+
+            input[type=submit] {
+                background-color: #04AA6D;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                float: right;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            .container {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+
+            .col-25 {
+                float: left;
+                width: 25%;
+                margin-top: 6px;
+            }
+
+            .col-75 {
+                float: left;
+                width: 75%;
+                margin-top: 6px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+                .col-25, .col-75, input[type=submit] {
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Input con modulo responsive</h2>
+        <p>Modulo responsive con tre campi, dopo l'invio dei tre campi come output concatena le tre stringhe e poi le concatena al contrario</p>
+
+        <div class="container">
+            <form name="f1">
+                <div class="row">
+                    <div class="col-25">
+                        <p>Primo campo</p>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="first" name="first" placeholder="Inserisci qualcosa...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <p>Secondo campo</p>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="second" name="second" placeholder="Inserisci qualcosa...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <p>Terzo campo</p>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="third" name="third" placeholder="Inserisci qualcosa...">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" onClick='concatena()'>
+                </div>
+            </form> 
+        </div>
+        <script language="JavaScript">
+            function concatena(){
+                var primo = (document.f1.first.value);
+                var secondo = (document.f1.second.value);
+                var terzo = (document.f1.third.value);
+
+                document.write("Righe concatenate<br>")
+                document.write(primo + secondo + terzo + "<br>")
+
+                document.write("Righe concatenate al contrario<br>")
+
+                var splString = primo.split("");
+                var revArray = splString.reverse();
+                var omirp =  revArray.join("");
+
+                document.write(omirp + "<br>")
+
+                var splString = secondo.split("");
+                var revArray = splString.reverse();
+                var odnoces =  revArray.join("");
+
+                document.write(odnoces + "<br>")
+
+                var splString = terzo.split("");
+                var revArray = splString.reverse();
+                var ozret =  revArray.join("");
+
+                document.write(ozret)
+            }
+        </script>
+    </body>
+</html>
