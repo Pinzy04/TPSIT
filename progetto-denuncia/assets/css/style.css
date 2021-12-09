@@ -1,0 +1,223 @@
+/* Reset via Meyerweb @ https://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Italic'), local('Roboto-Italic'),
+        url('../fonts/Roboto-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Elements */
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, table, ul, img, .fluidvid {
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 50%;
+    max-width: 50%;
+    margin: auto;
+    padding-bottom: 1.5em;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.5em;
+}
+
+ul {
+    padding-left: 1.8em;
+}
+
+ol {
+    font-size: 19px;
+    display: list-item;
+    line-height: 1.5em;
+    margin-top: 0.3em;
+}
+
+.byline, .footer {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.meta {
+    padding-bottom: 1em;
+}
+
+.content {
+    border-top: 1px solid #b9b9b9;
+    padding-top: 1em;
+}
+
+.post-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.post-title {
+    margin-top: 0;
+    padding-top: 0.5em;
+}
+
+#counter {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: #ddd;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
+#progress-bar {
+    background-color: #000000;
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+p#cont {
+    text-align: center;
+    font-style: italic;
+    font-size: 35px;
+}
+
+/* Responsive */
+
+@media all and (max-width: 980px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    p, li, ol {
+        font-size: 17px;
+    }
+}
+/* Side Bar */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #04AA6D;
+	color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+@media screen and (max-width: 400px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.sidebar a {float: left;}
+	div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+	.sidebar a {
+		text-align: center;
+		float: none;
+	}
+}
