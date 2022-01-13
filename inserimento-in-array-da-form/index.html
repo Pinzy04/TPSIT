@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Documento</title>
 </head>
 <body>
 <script>
-    let items = ['a','b'];
+    let parole = [];
 
-    function inputToArray() {
-        let str="";
+    function inserici() {
+        let stringa="";
         let boxvalue="";
       boxvalue = document.getElementById('box').value;
-      items.push(boxvalue);
-      console.log(items);
-      str=str+","+boxvalue;
-      document.getElementById('out').innerHTML=items;
+      parole.push(boxvalue);
+      console.log(parole);
+      stringa = stringa+", "+ boxvalue;
+      document.getElementById('out').innerHTML=parole;
       return false;
       }
 
-function printArray(){
-   let str=""; 
-for(let i=0;i<items.length;i++)
+function stampaArray(){
+   let stringa=""; 
+for(let i=0;i<parole.length;i++)
 {
-str=str+" "+items[i].value;
+stringa = stringa +" "+parole[i].value;
 
 }
-return str;
+return stringa;
 
 }
 
 </script>
 
 
-    <form onsubmit="return inputToArray()">
-        <p>Please insert the items</p>
+    <form onsubmit="return inserisci()">
+        <p>Inserisci le parole</p>
         <input type="text" id="box">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Invio">
       </form>
 
       <p id="out"></p>
