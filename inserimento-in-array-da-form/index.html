@@ -10,13 +10,13 @@
 <script>
     let parole = [];
 
-    function inserici() {
+    function inserisci() {
         let stringa="";
         let boxvalue="";
       boxvalue = document.getElementById('box').value;
       parole.push(boxvalue);
       console.log(parole);
-      stringa = stringa+", "+ boxvalue;
+      stringa=stringa+","+boxvalue;
       document.getElementById('out').innerHTML=parole;
       return false;
       }
@@ -25,7 +25,7 @@ function stampaArray(){
    let stringa=""; 
 for(let i=0;i<parole.length;i++)
 {
-stringa = stringa +" "+parole[i].value;
+stringa = stringa + " " + parole[i].value;
 
 }
 return stringa;
