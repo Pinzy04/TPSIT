@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo">Questa pagina conta quanto tempo ci metti a premere il bottone e lo memorizza in un array</p>
+        <p id="out">........0.0</p>
+        <p id="array"></p>
+        <button type="button" onclick='count()'>Invia</button>
+        <script>
+            let i = 0;
+            let items = []
+            let start = Date.now();
+            function count() {
+                let ms = Date.now() - start;
+                document.getElementById("out").innerHTML="Done in " + ms + " ms";
+                items[i] = ms;
+                i++;
+                document.getElementById("array").innerHTML=items;
+            }
+        </script>
+    </body>
+</html>
