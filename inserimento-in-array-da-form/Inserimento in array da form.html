@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inserimento in array da form</title>
+</head>
+<body>
+<script>
+    let parole = [];
+
+    function inserisci() {
+        let stringa="";
+        let boxvalue="";
+      boxvalue = document.getElementById('box').value;
+      parole.push(boxvalue);
+      console.log(parole);
+      stringa = stringa + ", " + boxvalue;
+      document.getElementById('out').innerHTML=parole;
+      return false;
+      }
+
+function stampaArray(){
+   let stringa=""; 
+for(let i=0;i<parole.length;i++)
+{
+stringa = stringa + " " + parole[i].value;
+
+}
+return stringa;
+
+}
+
+</script>
+
+<div class="container">
+    <form onsubmit="return inserisci()">
+        <div class="row">
+            <div class="col-25">
+                <p>Inserisci le parole</p>
+            </div>
+            <div class="col-75">
+                <input type="text" id="box">
+            </div>
+            <div class="row">
+                <input type="submit" value="Invio">
+            </div>
+      </form>
+      <p id="out"></p>
+</div>
+</body>
+</html>
