@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Generatore di frasi 1.0</title>
+
+        <link rel="stylesheet" href="./css/Rform.css">
+        <link rel="stylesheet" href="./css/MioCss.css">
+        
+        <script type="text/javascript" src="sentence_engine.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <form class="form-inline" onsubmit="false">
+
+                <p>Generatore di frasi ver 0.1</p>
+
+                <p>Puoi caricare nuove parole come soggetto verbo complemento e aggettivi e il motore continuerà a produrre
+
+                una frase ogni secondo combinando le parole senza pesi Nella versione 0.2 sono introdotti pesi associativi per
+
+                combinare parole con un senso minimamente compiuto dipendentemente dai parametri del Sentence-engine.
+
+                </p>
+
+                <label for="lblsubject">Soggetto</label>
+                <input id="subject" type="text" >
+                <div style="margin:2px">
+                    <input type="button" onclick="AddWord('soggetto')" value="Aggiungi Soggetto">
+                    <p id ='outsoggetto'>....</p>
+                </div>
+
+                <label for="lblsubject">Verbo</label>
+                <input id="verb" type="text" >
+                <div style="margin:2px">
+                    <input type="button" onclick="AddWord('verbo')" value="Aggiungi Verbo">
+                    <p id ='outverbo'>....</p>
+                </div>
+
+                <label for="lblco">Complemento oggetto</label>
+                <input id="co" type="text" >
+                <div style="margin:2px">
+                    <input type="button" onclick="AddWord('co')" value="Aggiungi Complemento Oggetto/luogo">
+                    <p id ='outco'>....</p>
+                </div>
+
+                <label for="lbladjective">Aggettivo</label>
+                <input id="adjective" type="text" >
+                <div style="margin:2px">
+                    <input type="button" onclick="AddWord('aggettivo')" value="Aggiungi aggettivo">
+                    <p id ='outa'>....</p>
+                </div>
+
+                <!--- <input type="submit" value="Add subject">-->
+
+            </form>
+        </div>
+        <input type="submit" onclick="generatore()" value="Generatore random">
+
+        <p id="output">....</p>
+
+        <script>
+
+            let vetSubject =[];
+            let vetVerb=[];
+            let vetCO=[];
+            let vetAdjective=[];
+
+            function AddWord(parola) {
+
+                let subjectItem="";
+                if (parola=='soggetto')
+                {
+                    subjectItem = document.getElementById('subject').value;
+                    if (subjectItem.length>=1)
+                    { 
+                        vetSubject.push(subjectItem);
+                        document.getElementById('outsoggetto').innerText=vetSubject;
+                        document.getElementById('subject').value="";
+                    }
+                }
+
+                if (parola=='verbo')
+                {
+                    subjectItem = document.getElementById('verb').value;
+                    if (subjectItem.length>=1)
+                    {
+                        vetVerb.push(subjectItem);
+                        document.getElementById('outverbo').innerText=vetVerb;
+                        document.getElementById('verb').value="";
+                    }
+                }
+
+                if (parola=='co')
+                {
+                    subjectItem = document.getElementById('co').value;
+                    if (subjectItem.length>=1)
+                    {
+                        vetCO.push(subjectItem);
+                        document.getElementById('outco').innerText=vetCO;
+                        document.getElementById('co').value="";
+                    }
+                }
+
+                if (parola=='aggettivo')
+                {
+                    subjectItem = document.getElementById('adjective').value;
+                    if (subjectItem.length>=1)
+                    {
+                        vetAdjective.push(subjectItem);
+                        document.getElementById('outa').innerText=vetAdjective;
+                        document.getElementById('adjective').value="";
+                    }
+                }
+            }
+
+            function generatore(){
+                let sentence='';
+                let spazio=", ";
+                let lenS=vetSubject.length;
+                let lenV=vetVerb.length;
+                let lenC=vetCO.length;
+                let lenA=vetAdjective.length;
+
+                let is=Math.floor(Math.random() * lenS);
+                let iv=Math.floor(Math.random() * lenV);
+                let ic=Math.floor(Math.random() * lenC);
+                let ia=Math.floor(Math.random() * lenC);
+
+                sentence = vetSubject[is] + spazio+ vetVerb[iv] + spazio + vetCO[ic] + spazio + vetAdjective[ia];
+
+                document.getElementById('output').innerHTML=sentence;
+            }
+
+        </script>
+
+    </body>
+</html>
