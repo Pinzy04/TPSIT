@@ -87,7 +87,7 @@ a {
     text-decoration: none;
 }
 
-.container1 {
+.container {
     width: 50%;
     max-width: 50%;
     margin: auto;
@@ -173,7 +173,7 @@ p#cont {
 /* Responsive */
 
 @media all and (max-width: 980px) {
-    .container1 {
+    .container {
         width: 100%;
         max-width: 100%;
         padding: 10px;
