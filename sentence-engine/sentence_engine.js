@@ -53,7 +53,7 @@ let vetSubject =[];
 
             function generatore(){
                 let sentence='';
-                let spazio=", ";
+                let spazio=" ";
                 let lenS=vetSubject.length;
                 let lenV=vetVerb.length;
                 let lenC=vetCO.length;
