@@ -7,6 +7,8 @@ audio[4] = new Audio("./audio-assets/err.mp3");
 
 let score = 0;
 let combo = 1;
+let maxScore = 0;
+let maxCombo = 0;
 let casuale;
 let tempo1;
 
@@ -65,15 +67,15 @@ function temposcaduto(){
         score = score - 50*combo;
         combo = 1;
 
-        document.getElementById("score").innerText="score: " + score;
-        document.getElementById("combo").innerText="combo: x" + combo;
+        document.getElementById("score").innerText="SCORE: " + score;
+        document.getElementById("combo").innerText="COMBO: x" + combo;
     }
     else{
         score = 0;
         combo = 1;
 
-        document.getElementById("score").innerText="score: " + score;
-        document.getElementById("combo").innerText="combo: x" + combo;
+        document.getElementById("score").innerText="SCORE: " + score;
+        document.getElementById("combo").innerText="COMBO: x" + combo;
     }
 }
 
@@ -101,23 +103,31 @@ function tastoPremuto(n) {
         audio[n].play();
         score = score + 100*combo;
         combo++;
-        document.getElementById("score").innerText="score: " + score;
-        document.getElementById("combo").innerText="combo: x" + combo;
+        if(score > maxScore){
+            maxScore = score;
+        }
+        if(combo > maxCombo){
+            maxCombo = combo;
+        }
+        document.getElementById("score").innerText="SCORE: " + score;
+        document.getElementById("combo").innerText="COMBO: x" + combo;
+        document.getElementById("maxScore").innerText="MAX SCORE: " + maxScore;
+        document.getElementById("maxCombo").innerText="MAX COMBO: x" + maxCombo;
     }else{
         audio[4].play();
         if(score - 50*combo >= 0){
             score = score - 50*combo;
             combo = 1;
 
-            document.getElementById("score").innerText="score: " + score;
-            document.getElementById("combo").innerText="combo: x" + combo;
+            document.getElementById("score").innerText="SCORE: " + score;
+            document.getElementById("combo").innerText="COMBO: x" + combo;
         }
         else{
             score = 0;
             combo = 1;
 
-            document.getElementById("score").innerText="score: " + score;
-            document.getElementById("combo").innerText="combo: x" + combo;
+            document.getElementById("score").innerText="SCORE: " + score;
+            document.getElementById("combo").innerText="COMBO: x" + combo;
         }
     }
 }
