@@ -8,7 +8,7 @@ var isPaused = false;
 
 const interval = setInterval(cambiacolore,700);
 const interval1 = setInterval(function(){
-    const interval2 = setInterval(function(){document.getElementById("countdown").innerHTML=interval2},10);
+    const interval2 = setInterval(function(){document.getElementById("countdown").innerHTML=interval2},100);
 },700);
 
 window.addEventListener('keydown', checkKeyPress, false);
