@@ -1,5 +1,4 @@
-
-    let on=[];
+let on=[];
 on[0]=false;
 on[1]=false;
 on[2]=false;
@@ -9,7 +8,7 @@ var isPaused = false;
 
 const interval = setInterval(cambiacolore,700);
 const interval1 = setInterval(function(){
-    const interval2 = setInterval(function(){document.getElementById("countdown").innerHTML=interval2},1);
+    const interval2 = setInterval(function(){document.getElementById("countdown").innerHTML=interval2},10);
 },700);
 
 window.addEventListener('keydown', checkKeyPress, false);
