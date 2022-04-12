@@ -1,0 +1,49 @@
+#scoreContainer
+{
+    border: 1px black solid;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.bottone {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #000000 3px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.colonna
+{
+    border: 1px black solid;
+    background-color: white;
+    height: 250px;
+    width: 85%;
+    text-align: center;
+    margin: 5px;
+}
+
+#fire1
+{
+    background-color: green;
+}
+
+#fire2
+{
+    background-color: orange;
+}
+
+#fire3
+{
+    background-color: deepskyblue;
+}
+
+#fire4
+{
+    background-color: red;
+}

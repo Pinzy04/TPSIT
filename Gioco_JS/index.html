@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "it">
+    <head>
+        <title> Piano Rush </title>
+
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href = "Style/style.css">
+    </head>
+    <body style="background-color: gainsboro; text-align: center; font-size: 20px;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="./images/logo.jpg" alt="..." width="30" height="24" class="d-inline-block align-text-top">
+                    Piano Rush
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pianorush.html">Gioco</a>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </nav>
+        <div class = "container">
+            <h1> Piano Rush </h1>
+            <h2> Obiettivo del gioco </h2>
+            <p> L'obiettivo del gioco è quello di misurare la performance di reazione della persona al capitare di un evento che 
+                viene presentato casualmente aumentando il punteggio totale ogni volta che viene premuto il tasto al momento giusto. 
+            </p>
+            <h2> Dinamiche del gioco </h2>
+            <p> Dopo aver cliccato il pulsante "Play" al fondo della pagina si verra indirizzati alla pagina del gioco. Apparira la schermata
+                di gioco composta da: punteggio, 4 riquadri e 4 bottoni di colori differenti.
+                Ogni volta che si verifica l'evento del bottone al momento giusto aumenta il punteggio totale, se vengono premuti più tasti di
+                seguito con il tempismo corretto viene creata una combo che moltiplicherà il punteggio ottenuto successivamente.
+                Se invece si sbaglia bottone la combo si annulla, tornando a x1, e al punteggio totale verranno decurtati dei punti a seconda
+                della combo a cui si è arrivati (per la precisione la meta dei punti che si sarebbero potuti ottenere in quel momento).
+            </p>
+            <p style = "text-align: right"> Created by: Fabio Pinzarrone, Denise Tinaglia e Nicholas Valenzano </p>
+            <a href="./pianorush.html"> <button type="button" class="btn btn-dark" style="font-size: 50px;"> Play </button> </a>
+        </div>
+    </body>
+</html>
