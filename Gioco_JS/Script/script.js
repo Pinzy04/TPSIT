@@ -75,7 +75,6 @@ function cambiaColonnaColore(casuale) {
     document.getElementById(coloreArray[casuale]).style.backgroundColor=coloreArray[casuale];
     on[casuale]=true;
     timeout = setTimeout(temposcaduto,700);
-    setInterval(function(){document.getElementById("countdown").innerHTML=timeout;},100);
 }
 
 function tastoPremuto(n) {
