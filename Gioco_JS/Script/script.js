@@ -1,3 +1,21 @@
+let audio = [];
+audio[0] = new Audio("./audio-assets/do.mp3");
+audio[1] = new Audio("./audio-assets/mi.mp3");
+audio[2] = new Audio("./audio-assets/sol.mp3");
+audio[3] = new Audio("./audio-assets/si.mp3");
+audio[4] = new Audio("./audio-assets/err.mp3");
+
+let score = 0;
+let combo = 1;
+let casuale;
+let tempo1;
+
+let coloreArray=[];
+coloreArray[0]="green";
+coloreArray[1]="orange";
+coloreArray[2]="deepskyblue";
+coloreArray[3]="red";
+
 let on=[];
 on[0]=false;
 on[1]=false;
