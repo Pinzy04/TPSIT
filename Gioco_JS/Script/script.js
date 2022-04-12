@@ -7,9 +7,6 @@ on[3]=false;
 var isPaused = false;
 
 const interval = setInterval(cambiacolore,700);
-const interval1 = setInterval(function(){
-    const interval2 = setInterval(function(){document.getElementById("countdown").innerHTML=interval2},100);
-},700);
 
 window.addEventListener('keydown', checkKeyPress, false);
 
@@ -41,6 +38,7 @@ function cambiacolore(){
     if(isPaused == false){
         casuale=parseInt(Math.random()*4);
         cambiaColonnaColore(casuale);
+        const interval2 = setInterval(function(){document.getElementById("countdown").innerHTML=interval2},100);
     }
 }
 
